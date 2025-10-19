@@ -3,7 +3,7 @@ name: Initiate Generator
 on:
   workflow_dispatch:       
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/45 * * * *"
 jobs:
   use-secret:
     runs-on: ubuntu-latest
