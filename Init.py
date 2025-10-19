@@ -31,17 +31,16 @@ if hshu:
 
   def elm(fp,etl):
 	print(fp)
-    r=requests.get(fp,headers=rl)
-    if r.status_code != 200:
-      print("Error retreving code {}".format(etl))
-      sys.exit()
-
-    try:
-      exec(base64.b64decode(r.json()['content']).decode('utf-8'),globals())
-    except:
-      print("Bad performance {}".format(etl))
-      sys.exit()
-    return
+	r=requests.get(fp,headers=rl)
+	if r.status_code != 200:
+		print("Error retreving code {}".format(etl))
+		sys.exit()
+	try:
+		exec(base64.b64decode(r.json()['content']).decode('utf-8'),globals())
+	except:
+		print("Bad performance {}".format(etl))
+		sys.exit()
+	return
   
   cues=hsh["ufh"].split(",")
   cpe=hsh["pasc"].split(",")
