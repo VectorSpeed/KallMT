@@ -1,5 +1,6 @@
-import requests, json, base64
-import pickle
+import requests, json, base64, pickle, math, random, copy, types
+import numpy as np
+from decimal import Decimal
 from datetime import datetime
 
 now = datetime.now()
