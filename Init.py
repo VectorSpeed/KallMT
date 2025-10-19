@@ -28,7 +28,6 @@ if hshu:
   rl={
 	  "Authorization": "token {}".format(hsh["hbtk"])
   }
-
   def elm(fp,etl):
 	r=requests.get(fp,headers=rl)
 	print(fp)
