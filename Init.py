@@ -20,14 +20,11 @@ hshu = os.getenv("CR")
 
 if hshu:
   try:
-    hsh = json.loads(hshu)
+	hsh = json.loads(hshu)
   except:
-    print("Bad Access ETP")
-    sys.exit()
-
-  rl={
-	"Authorization": "token {}".format(hsh["hbtk"])
-  }
+	print("Bad Access ETP")
+	sys.exit()
+  rl={"Authorization": "token {}".format(hsh["hbtk"])}
   def elm(fp,etl):
 	r=requests.get(fp,headers=rl)
 	print(fp)
