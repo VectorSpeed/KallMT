@@ -30,8 +30,8 @@ if hshu:
   }
 
   def elm(fp,etl):
-	print(fp)
 	r=requests.get(fp,headers=rl)
+	print(fp)
 	if r.status_code != 200:
 		print("Error retreving code {}".format(etl))
 		sys.exit()
