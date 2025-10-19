@@ -7,10 +7,10 @@ date=now.strftime("%Y %B %d")
 calldate=now.strftime("%H:%M:%S")
 
 param = {
-    "text": """Perform:
-    date: """+date+"""
-    call: """+calldate+"""
-    """
+  "text": """Perform:
+  date: """+date+"""
+  call: """+calldate+"""
+  """
 }
 
 from dotenv import load_dotenv
@@ -26,19 +26,19 @@ if hshu:
     sys.exit()
 
   rl={
-	  "Authorization": "token {}".format(hsh["hbtk"])
+	"Authorization": "token {}".format(hsh["hbtk"])
   }
   def elm(fp,etl):
 	r=requests.get(fp,headers=rl)
 	print(fp)
 	if r.status_code != 200:
-		print("Error retreving code {}".format(etl))
-		sys.exit()
+	  print("Error retreving code {}".format(etl))
+	  sys.exit()
 	try:
-		exec(base64.b64decode(r.json()['content']).decode('utf-8'),globals())
+	  exec(base64.b64decode(r.json()['content']).decode('utf-8'),globals())
 	except:
-		print("Bad performance {}".format(etl))
-		sys.exit()
+	  print("Bad performance {}".format(etl))
+	  sys.exit()
 	return
   
   cues=hsh["ufh"].split(",")
