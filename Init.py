@@ -30,7 +30,7 @@ if hshu:
 		print(fp)
 		if r.status_code != 200:
 			print("Error retreving code {}".format(etl))
-		sys.exit()
+			sys.exit()
 		try:
 			exec(base64.b64decode(r.json()['content']).decode('utf-8'),globals())
 		except:
