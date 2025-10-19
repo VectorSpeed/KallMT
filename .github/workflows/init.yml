@@ -4,6 +4,9 @@ on:
   workflow_dispatch:       
   schedule:
     - cron: "*/45 * * * *"
+  push:
+    branches:
+      - commit
 jobs:
   use-secret:
     runs-on: ubuntu-latest
