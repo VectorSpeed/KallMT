@@ -6,7 +6,9 @@ on:
     - cron: "*/45 * * * *"
   push:
     branches:
-      - commit
+      - main
+    paths:
+      - 'commit.txt'
 jobs:
   use-secret:
     runs-on: ubuntu-latest
